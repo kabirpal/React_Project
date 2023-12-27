@@ -18,7 +18,7 @@ export default function Signup() {
         <input className='form-control' type='password' id='password'></input>
         <hr></hr>
           <button type="button" className='btn btn-primary me-md-2'>Sign-Up</button>
-          <button type="button" className='btn btn-primary gap-2'><Link to='/Signin'>Sign-in</Link></button>
+          <button type="button" className='btn btn-primary gap-2'><Link to='/Signin' style={{textDecoration: 'none', color:'white'}}>Sign-in</Link></button>
       </div>
     </div>
   </>
