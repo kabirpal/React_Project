@@ -6,6 +6,7 @@ import {Route, Routes} from 'react-router-dom';
 import Signup from './components/Signin/Signup';
 import Login from './components/Signin/Login';
 import Navbar from './components/Navbar/Navbar';
+import PasswordGenerator from './components/PasswordGenerator/PasswordGenerator';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Homepage></Homepage>}></Route>
         <Route path="/Signup" element={<Signup></Signup>}></Route>
         <Route path="/Signin" element={<Login></Login>}></Route>
+        <Route path="/Password-generator" element={<PasswordGenerator></PasswordGenerator>}></Route>
       </Routes>
     </div>
   )
