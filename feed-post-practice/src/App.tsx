@@ -7,6 +7,8 @@ import Login from './components/Signin/Login';
 import Navbar from './components/Navbar/Navbar';
 import Feed from './components/Feed/Feed';
 import DeleteAlert from './components/Alerts/DeleteAlert';
+import PasswordGenerator from './components/PasswordGenerator/PasswordGenerator';
+
 
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
                 <Route path="/Signin" element={<Login></Login>}></Route>
                 <Route path='/Feed' element={<Feed/>}></Route>
                 <Route path='/Delete' element={<DeleteAlert/>}></Route>
+                <Route path="/Password-generator" element={<PasswordGenerator></PasswordGenerator>}></Route>
                 </Routes>
             </div>
         </>
