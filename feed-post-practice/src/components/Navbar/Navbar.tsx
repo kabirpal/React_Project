@@ -16,7 +16,7 @@ export default function Navbar() {
               {/* <Link className="nav-link" to="/">Home</Link> */}
               <Link className="nav-link active" aria-current="page" to="/Feed">Home</Link>
                 <Link className="nav-link" to="/Password-generator">Password Generator</Link>
-                <a className="nav-link" href="#">Pricing</a>
+                <Link className="nav-link" to="/currency-converter">Currency Converter</Link>
                 <a className="nav-link disabled" aria-disabled="true">Disabled</a>
               </div>
             </div>

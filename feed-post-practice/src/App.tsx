@@ -8,6 +8,7 @@ import Navbar from './components/Navbar/Navbar';
 import Feed from './components/Feed/Feed';
 import DeleteAlert from './components/Alerts/DeleteAlert';
 import PasswordGenerator from './components/PasswordGenerator/PasswordGenerator';
+import CurrencyConverter from './components/CurrencyConverter/CurrencyConverter';
 
 
 
@@ -23,6 +24,7 @@ function App() {
                 <Route path='/Feed' element={<Feed/>}></Route>
                 <Route path='/Delete' element={<DeleteAlert/>}></Route>
                 <Route path="/Password-generator" element={<PasswordGenerator></PasswordGenerator>}></Route>
+                <Route path='/currency-converter' element={<CurrencyConverter></CurrencyConverter>}></Route>
                 </Routes>
             </div>
         </>
