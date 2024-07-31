@@ -61,6 +61,11 @@ code {
   height: 200px;
 }
 
+.filter-btn {
+  margin: 5px;
+  padding: 3px;
+}
+
 .App {
   text-align: center;
 }
