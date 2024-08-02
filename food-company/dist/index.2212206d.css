@@ -33,6 +33,7 @@ code {
 
 .res-container {
   flex-wrap: wrap;
+  justify-content: space-around;
   display: flex;
 }
 
@@ -64,6 +65,25 @@ code {
 .filter-btn {
   margin: 5px;
   padding: 3px;
+}
+
+.shimmer-container {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.shimmer-card {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  width: 200px;
+  height: 400px;
+  margin: 10px;
+}
+
+.top-res {
+  justify-content: space-between;
+  margin: 5px;
+  display: flex;
 }
 
 .App {
