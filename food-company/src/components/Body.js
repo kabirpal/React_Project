@@ -2,6 +2,7 @@ import RestaurantCard from './RestaurantCard';
 import resList from '../utils/mockData';
 import { useState,useEffect } from 'react';
 import Shimmer from './Shimmer';
+import {SWIGGY_API} from '../utils/constants';
 
 const Body = () => {
 
@@ -14,7 +15,7 @@ const Body = () => {
     },[])
 
     const fetchData = async ()=>{
-        const data =await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.9124336&lng=75.7872709&is-seo-homepage-enabled=true&page_type=DESKT");
+        const data =await fetch(SWIGGY_API);
         const fetchedData = await data.json();
         setListOfRestaurant(fetchedData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
         setFilteredRestaurant(fetchedData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
@@ -29,7 +30,8 @@ const Body = () => {
         <div className="body-container">
             <div className="top-res">
                 <div className='search-container'>
-                    <input type="text" className="search-bar" placeholder='Enter search keyword' value={searchText} onChange={(e)=>(setSearchText(e.target.value))}/>                
+                    <input type="text" className="search-bar" placeholder='Enter search keyword' 
+                    value={searchText} onChange={(e)=>(setSearchText(e.target.value))}/>                
                     <button type='button' id='search-btn' 
                         onClick={()=>{
                             const filteredRestList = listOfRestaurant.filter(
