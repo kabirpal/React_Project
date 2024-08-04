@@ -3,12 +3,15 @@ import resList from '../utils/mockData';
 import { useState,useEffect } from 'react';
 import Shimmer from './Shimmer';
 import {SWIGGY_API} from '../utils/constants';
+import { Link } from 'react-router-dom';
+import useOnlineStatus from '../utils/customHooks/useOnlineStatus';
 
 const Body = () => {
 
     const [listOfRestaurant, setListOfRestaurant] = useState([]);
     const [filteredRestaurant, setFilteredRestaurant] = useState([]);
     const [searchText, setSearchText]= useState("");
+    const onlineStatus = useOnlineStatus();
 
     useEffect(()=>{
         fetchData();
@@ -25,6 +28,8 @@ const Body = () => {
     //     return <Shimmer/>
     // }
     //Using Ternary Operator
+
+    if(onlineStatus===false)return<h1>Seems like your internet is not working. Please check your internet</h1>
 
     return (listOfRestaurant.length === 0)?<Shimmer/>:(
         <div className="body-container">
@@ -56,7 +61,7 @@ const Body = () => {
             <div className="res-container">
                 {
                     filteredRestaurant.map((restaurant) => (
-                        <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+                        <Link key={restaurant.info.id} to={'/restaurant-menu/'+restaurant.info.id}><RestaurantCard  resData={restaurant} /></Link>
                     ))
                 }
             </div>
